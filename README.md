@@ -74,7 +74,7 @@ Open **Preferences** from the menu-bar icon. Everything is one click:
 
 ## 📥 Get it
 
-1. Download the latest **[NotchFlow.dmg](https://github.com/VIK-DD/NotchFlow/releases/latest)**.
+1. Download the latest **[NotchFlow.dmg](https://github.com/VIK-DD/NotchFlow/releases/latest)**
 2. Open it and drag **NotchFlow** into **Applications**.
 3. Launch it — a little island appears at your notch. That's it. 🎉
 
