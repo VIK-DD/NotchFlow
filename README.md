@@ -12,8 +12,9 @@ player when you reach for it.
 
 [![Download](https://img.shields.io/github/v/release/VIK-DD/NotchFlow?label=Download&style=for-the-badge&color=2563eb)](https://github.com/VIK-DD/NotchFlow/releases/latest)
 [![macOS](https://img.shields.io/badge/macOS-12%2B-black?style=for-the-badge&logo=apple)](#-works-on)
-[![Universal](https://img.shields.io/badge/Apple%20Silicon%20%2B%20Intel-success?style=for-the-badge)](#-works-on)
-[![No setup](https://img.shields.io/badge/setup-none-success?style=for-the-badge)](#-get-it)
+[![Swift](https://img.shields.io/badge/Swift-5.7-orange?style=for-the-badge&logo=swift)](https://swift.org)
+[![Universal](https://img.shields.io/badge/Universal-Intel%20%7C%20Apple%20Silicon-success?style=for-the-badge)](#-works-on)
+[![No dependencies](https://img.shields.io/badge/dependencies-none-success?style=for-the-badge)](#-what-it-does)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 <br/>
@@ -63,8 +64,8 @@ Open **Preferences** from the menu-bar icon. Everything is one click:
 | **Expand on Track Change** | When a new song starts, the island peeks out for a moment so you catch what's playing. |
 | **Tint from Album Art** | Borrows a colour from the cover so the player matches the mood of each song. |
 | **Always Show on Desktop** | Keeps the island visible when you're on the Desktop / Finder. |
-| **Idle Opacity** | How visible the island is when you're not using it — from fully hidden to always solid. |
-| **Auto-hide Delay** | How long it waits before gently fading out once you stop. |
+| **Idle Opacity** | How bright the island is when you're not using it — slide from `0%` (invisible) to `100%` (always solid). |
+| **Auto-hide Delay** | How many seconds it waits before fading out once you stop — anywhere from `0s` to `30s`. |
 
 > 💡 Tip: hover to open, drag the bars to seek or change volume, and quit anytime from
 > the menu-bar icon.
@@ -98,14 +99,22 @@ Needs Xcode 14+. Open the project with `open Package.swift`.
 
 ## 💻 Works on
 
-Runs natively on **Apple Silicon and Intel** (one universal app).
+Runs natively on both **Apple Silicon** and **Intel** — one universal app, no Rosetta.
 
-| macOS | Status |
-|-------|--------|
-| Monterey 12 → Sequoia 15.3 | ✅ Fully supported |
-| Sequoia 15.4+ | ⚠️ The island works, but Apple limited the system "Now Playing" data, so song info may not appear |
+| macOS | Name | Version | Status |
+|:------|:-----|:-------:|:-------|
+| 🟢 | **Monterey** | 12 | ✅ Fully supported *(minimum)* |
+| 🟢 | **Ventura** | 13 | ✅ Fully supported |
+| 🟢 | **Sonoma** | 14 | ✅ Fully supported |
+| 🟢 | **Sequoia** | 15.0 – 15.3 | ✅ Fully supported |
+| 🟡 | **Sequoia** | 15.4+ | ⚠️ Island works, but Apple limited system *Now Playing*, so song info may not appear |
 
-No notch? No problem — NotchFlow shows a neat little pill at the top-center instead.
+| Chip | Status |
+|:-----|:-------|
+| 🍎 Apple Silicon (M1–M4) | ✅ Native |
+| 💻 Intel | ✅ Native |
+
+> No notch? No problem — NotchFlow shows a neat little pill at the top-center instead.
 
 ---
 
@@ -116,11 +125,14 @@ Login* first if you had it on.)
 
 ---
 
+<div align="center">
+
 ## 📜 License
 
 [MIT](LICENSE) © 2026 VIK-DD — do whatever you like with it.
 
-<div align="center">
 <br/>
+
 Made to be calm, fast, and yours · Made in Moldova 🇲🇩
+
 </div>
