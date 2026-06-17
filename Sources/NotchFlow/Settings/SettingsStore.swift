@@ -13,7 +13,6 @@ import Combine
 final class SettingsStore: ObservableObject {
 
     private enum Key {
-        static let pollInterval = "pollInterval"
         static let expandOnTrackChange = "expandOnTrackChange"
         static let reactToWidgetEvents = "reactToWidgetEvents"
         static let useAlbumAccent = "useAlbumAccent"
@@ -25,11 +24,6 @@ final class SettingsStore: ObservableObject {
     private let defaults = UserDefaults.standard
 
     // MARK: Preferences
-
-    /// Seconds between Spotify polls while idle. 0.5...3.0.
-    @Published var pollInterval: TimeInterval {
-        didSet { defaults.set(pollInterval, forKey: Key.pollInterval) }
-    }
 
     /// Briefly expand the notch when the track changes.
     @Published var expandOnTrackChange: Bool {
@@ -70,7 +64,6 @@ final class SettingsStore: ObservableObject {
 
     init() {
         defaults.register(defaults: [
-            Key.pollInterval: 1.0,
             Key.expandOnTrackChange: true,
             Key.reactToWidgetEvents: true,
             Key.useAlbumAccent: true,
@@ -78,7 +71,6 @@ final class SettingsStore: ObservableObject {
             Key.hideDelay: 2.0,
             Key.alwaysShowOnDesktop: true
         ])
-        pollInterval = defaults.double(forKey: Key.pollInterval)
         expandOnTrackChange = defaults.bool(forKey: Key.expandOnTrackChange)
         reactToWidgetEvents = defaults.bool(forKey: Key.reactToWidgetEvents)
         useAlbumAccent = defaults.bool(forKey: Key.useAlbumAccent)
