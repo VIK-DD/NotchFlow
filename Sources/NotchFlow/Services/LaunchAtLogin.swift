@@ -62,11 +62,16 @@ enum LaunchAtLogin {
     // MARK: - Monterey
 
     private static func setLegacy(_ enabled: Bool) {
+        // Use the modern `bootstrap`/`bootout` domain API. The legacy
+        // `load -w` / `unload -w` is unreliable on Monterey+ (fails with EIO).
+        let domain = "gui/\(getuid())"
         if enabled {
             writeLegacyPlist()
-            runLaunchctl(["load", "-w", plistURL.path])
+            // Remove any stale registration first so bootstrap can't conflict.
+            runLaunchctl(["bootout", "\(domain)/\(label)"])
+            runLaunchctl(["bootstrap", domain, plistURL.path])
         } else {
-            runLaunchctl(["unload", "-w", plistURL.path])
+            runLaunchctl(["bootout", "\(domain)/\(label)"])
             try? FileManager.default.removeItem(at: plistURL)
         }
     }
