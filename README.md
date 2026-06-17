@@ -109,10 +109,15 @@ Runs natively on both **Apple Silicon** and **Intel** — one universal app, no 
 | 🟢 | **Sequoia** | 15.0 – 15.3 | ✅ Fully supported |
 | 🟡 | **Sequoia** | 15.4+ | ⚠️ Island works, but Apple limited system *Now Playing*, so song info may not appear |
 
-| Chip | Status |
-|:-----|:-------|
-| 🍎 Apple Silicon (M1–M4) | ✅ Native |
-| 💻 Intel | ✅ Native |
+<div align="center">
+
+<table>
+<tr><th>Chip</th><th>Status</th></tr>
+<tr><td>🍎 Apple Silicon (M1–M4)</td><td>✅ Native</td></tr>
+<tr><td>💻 Intel</td><td>✅ Native</td></tr>
+</table>
+
+</div>
 
 > No notch? No problem — NotchFlow shows a neat little pill at the top-center instead.
 
